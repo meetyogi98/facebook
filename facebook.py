@@ -140,5 +140,5 @@ def get_post_from_to_time():
     return render_template( 'rangeTime.html',tables=[fb.to_html()], titles=fb.columns.values);
 
 if __name__ == "__main__":
-    app.run(port=4555, debug=True)
+    app.run()
     
