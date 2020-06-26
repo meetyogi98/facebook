@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Facebook</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+ 
+</head>
+<body>
+ <div>
+	<h2><a style="color: white; text-decoration: none;" href="{{ url_for('index') }}">Facebook</a></h2>
+      <div class="login">
+        <span>
+          <form action="{{ url_for('get_post_fb') }}" method="post">
+            <input type="text" name="account" placeholder="Enter group or page id..." required="required" style="width: 300px" /> 
+            <input type="text" name="pages" placeholder="Enter number of pages to fetch" required="required" style="width: 300px" />
+            <input type="text" name="filename" placeholder="Enter your desired filename" required="required" style="width: 300px" />
+            <button type="submit" class="btn btn-primary btn-block btn-large" style=" position: relative; width: 100px; left: 200px">
+              Submit
+            </button>
+          </form>
+        </span>
+        <span>
+          <div style="font-size: 13px;color: #fff;text-shadow: 1px 1px 1px rgba(0,0,0,0.3);">
+            here you can try for pages like bbcnews,covid19news1,covidnewskh,etc...
+          </div>
+        </span>
+      </div>
+</div>
+  
+</body>
+
+</html>

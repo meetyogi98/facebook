@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Facebook</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+ 
+</head>
+<body>	
+  <h2><a style="color: white; text-decoration: none;" href="{{ url_for('index') }}">Facebook</a></h2>
+  <div class="login" style="top: 250px">
+    
+      <form action="{{ url_for('get_post_from_to_time') }}" method="post">
+        <input type="text" name="Time1" placeholder="Enter Starting Time" required="required" />
+        <input type="text" name="Time2" placeholder="Enter Ending Time" required="required" />
+        <input type="text" name="Date" placeholder="Enter Date" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large" style="width: 130px;">
+          Submit
+        </button>
+      </form>
+  </div>
+
+  <div style=" position: relative; overflow: scroll; height: 500px; top:180px; ">
+    {% for table in tables %}
+              {{titles[loop.index]}}
+              {{ table|safe }}
+    {% endfor %}
+  </div>  
+</body>
+
+</html>

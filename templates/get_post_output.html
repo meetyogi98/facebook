@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Facebook</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+ 
+</head>
+<body>	
+  <div >
+  <h2><a style="color: white; text-decoration: none;" href="{{ url_for('index') }}">Facebook</a></h2>  
+  <h2>Data fetched from facebook</h2>  
+  <div style=" position: relative; overflow: scroll; height: 650px; ">
+    {% for table in tables %}
+              {{titles[loop.index]}}
+              {{ table|safe }}
+    {% endfor %}
+  </div>
+
+  </div>
+  
+</body>
+
+</html>
