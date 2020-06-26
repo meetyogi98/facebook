@@ -1,4 +1,4 @@
 Flask==1.1.1
 os==3.8.2
-numpy=>1.9.2
-pandas=>1.0.1
+numpy==1.9.2
+pandas==1.0.1
