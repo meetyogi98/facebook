@@ -1,1 +1,1 @@
-win: gunicorn facebook:app
+web: gunicorn facebook:app
