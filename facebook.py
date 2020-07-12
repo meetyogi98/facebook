@@ -24,7 +24,7 @@ def get_post_fb():
 	filename = request.form.get('filename')
 	print(account,pages,filename)
 	from facebook_scraper import get_posts
-	post1 = get_posts(account,pages=pages, extra_info = True)
+	post1 = get_posts(account,pages=pages)
 	fb = pd.DataFrame(post1)
 	fb.to_csv(filename+'.csv')
 	fb = pd.read_csv( filename +'.csv')
