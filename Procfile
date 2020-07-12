@@ -1,2 +1,2 @@
-web: gunicorn facebook:app
+web gunicorn facebook:app
 heroku ps:scale web=1
